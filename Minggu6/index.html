@@ -4,6 +4,7 @@
         <title>Belajar Form Validation</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="validate.js"></script>
     </head>
 
     <body>
@@ -138,67 +139,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
-        <script>
-            function validateForm() {
-                if (document.forms["formPendaftaran"]["namadepan"].value == "") {
-                    alert("Nama depan Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["namadepan"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["namabelakang"].value == "") {
-                    alert("Nama belakang Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["namabelakang"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["NRP"].value == "") {
-                    alert("NRP Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["NRP"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["email"].value == "") {
-                    alert("Email Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["email"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["domisili"].value == "") {
-                    alert("Domisili Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["domisili"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["nomorhp"].value == "") {
-                    alert("Nomor HP Tidak Boleh Kosong");
-                    document.forms["formPendaftaran"]["nomorhp"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["fakultas"].selectedIndex < 1) {
-                    alert("Pilih Fakultas.");
-                    document.forms["formPendaftaran"]["fakultas"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["jurusan"].selectedIndex < 1) {
-                    alert("Pilih Jurusan.");
-                    document.forms["formPendaftaran"]["jurusan"].focus();
-                    return false;
-                }
-                if (document.forms["formPendaftaran"]["keteranganvaksin"].selectedIndex < 1) {
-                    alert("Keterangan Vaksin Tidak boleh Kosong");
-                    document.forms["formPendaftaran"]["keteranganvaksin"].focus();
-                    return false;
-                }
-            }
-            function validateFileupload(fileName) {
-                var allowed_extensions = new Array("jpg", "png", "pdf");
-                var file_extension = fileName.split(".").pop().toLowerCase(); // split function will split the filename by dot(.), and pop function will pop the last element from the array which will give you the extension as well. If there will be no extension then it will return the filename.
-
-                for (var i = 0; i <= allowed_extensions.length; i++) {
-                    if (allowed_extensions[i] == file_extension) {
-                        return true; // valid file extension
-                    }
-                }
-                alert("File sertifikat harus jpg, png, atau pdf !");
-                return false;
-            }
-        </script>
 
     </body>
     </html>
