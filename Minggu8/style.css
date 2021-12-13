@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+}
+
+body{
+    background:url('https://www.its.ac.id/wp-content/uploads/2020/12/Synchro_ITS_Header-1.jpg');
+    background-size:cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.container {
+    height: fit-content;
+    width: fit-content;
+    background-color: #F4F4F4;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+}
+
+.footer{
+    color: white;
+    background-color: #043C84;
+}
